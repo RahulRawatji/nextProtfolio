@@ -22,7 +22,7 @@ export default function Home() {
             <h1 className='text-xl font-burtons'>developedbyRahul</h1>
             <ul className='flex items-center'>
               <li>
-                <BsFillMoonStarsFill onClick={()=> setDarkMode(!darkMode) } className=' cursor-pointer' />
+                <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className=' cursor-pointer' />
               </li>
               <li>
                 <a className='bg-gradient-to-r from-cyan-500 to-teal-300 text-white px-4 py-2 rounded-md ml-8' href='#'>Resume</a>
@@ -42,7 +42,7 @@ export default function Home() {
             <AiFillMail />
           </div>
           <div className='relative w-80 h-80 mx-auto'>
-            <Image className="rounded-full" src={devAvatar} layout='fill'/>
+            <Image className="rounded-full" src={devAvatar} layout='fill' />
           </div>
         </section>
 
@@ -54,35 +54,35 @@ export default function Home() {
             </p>
           </div>
           <div className='lg:flex gap-10'>
-          <div className='text-center shadow-lg p-10 rounded-xl my-5'>
-            <Image src={devAvatar} width={150} height={150} />
-            <h3 className='text-lg font-medium pt-8 pb-2'>Web Application</h3>
-            <p className='py-2 flex-wrap'>
-              Creating web Application aasdasdasdasdasdasd as das das d asd asd asd asdasdsadasdasdasdasda asdasd aasdasd asd asd asd asd as da d asd asd assd as da da sd ass asd asd as dsa d asd asd a
-            </p>
-            <h4 className='py-4 text-teal-600'>Technology Used</h4>
-            <p className='text-gray-800 py-1'>React</p>
+            <div className='text-center shadow-lg p-10 rounded-xl my-5'>
+              <Image src={devAvatar} width={150} height={150} />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Web Application</h3>
+              <p className='py-2 flex-wrap'>
+                Creating web Application
+              </p>
+              <h4 className='py-4 text-teal-600'>Technology Used</h4>
+              <p className='text-gray-800 py-1'>React</p>
             </div>
 
             <div className='text-center shadow-lg p-10 rounded-xl my-5'>
-            <Image src={devAvatar} width={150} height={150} />
-            <h3 className='text-lg font-medium pt-8 pb-2'>Web Application</h3>
-            <p className='py-2'>
-              Creating web Application Creating web Application aasdasdasdasdasdasd as das das d asd asd asd asdasdsadasdasdasdasda asdasd aasdasd asd asd asd asd as da d asd asd assd as da da sd ass asd asd as dsa d asd asd a
-            </p>
-            <h4 className='py-4 text-teal-600'>Technology Used</h4>
-            <p className='text-gray-800 py-1'>React</p>
+              <Image src={devAvatar} width={150} height={150} />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Web Application</h3>
+              <p className='py-2'>
+                Creating web Application Creating
+              </p>
+              <h4 className='py-4 text-teal-600'>Technology Used</h4>
+              <p className='text-gray-800 py-1'>React</p>
             </div>
-            
+
             <div className='text-center shadow-lg p-10 rounded-xl my-5'>
-            <Image src={devAvatar} width={150} height={150} />
-            <h3 className='text-lg font-medium pt-8 pb-2'>Web Application</h3>
-            <p className='py-2'>
-              Creating web Application Creating web Application aasdasdasdasdasdasd as das das d asd asd asd asdasdsadasdasdasdasda asdasd aasdasd asd asd asd asd as da d asd asd assd as da da sd ass asd asd as dsa d asd asd a
-            </p>
-            <h4 className='py-4 text-teal-600'>Technology Used</h4>
-            <p className='text-gray-800 py-1'>React</p>
-          </div>
+              <Image src={devAvatar} width={150} height={150} />
+              <h3 className='text-lg font-medium pt-8 pb-2'>Web Application</h3>
+              <p className='py-2'>
+                Creating web Application
+              </p>
+              <h4 className='py-4 text-teal-600'>Technology Used</h4>
+              <p className='text-gray-800 py-1'>React</p>
+            </div>
           </div>
         </section>
         <div>
@@ -91,7 +91,7 @@ export default function Home() {
             Some text
           </p>
 
-          </div>
+        </div>
       </main>
 
     </div>
