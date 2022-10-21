@@ -11,8 +11,6 @@ import { useState, useEffect } from 'react';
 
 import devAvatar from '../public/devAvatar.png';
 
-import test01 from "../public/testimonial/test01.jpg";
-import test02 from "../public/testimonial/test02.jpg";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [quoteData, setQuoteData] = useState({});
