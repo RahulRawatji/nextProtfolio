@@ -1,4 +1,5 @@
 ## My Portfolio Website
  ### Technology Used
   - NextJs
-  -Tailwind CSS
+  - Tailwind CSS
+  - Axios

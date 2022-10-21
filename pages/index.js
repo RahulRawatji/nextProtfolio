@@ -4,6 +4,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillMail, AiOutlineReload } from 'react
 import { DiReact, DiNodejsSmall, DiBootstrap, DiJsBadge, DiCss3, DiAtom, DiHtml5, DiGithubBadge } from "react-icons/di";
 import { SiExpress, SiTypescript, SiServerless, SiTailwindcss, SiMaterialui, SiJest, SiPostgresql } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
+// import Link from 'next/link';
 
 import Image from 'next/image';
 import axios from 'axios';
@@ -62,7 +63,7 @@ export default function Home() {
             </p>
           </div>
           <div className='relative w-80 h-80 mx-auto'>
-            <Image className="rounded-full" src={devAvatar} layout='fill' />
+            <Image className="rounded-full" src={devAvatar} layout='fill'  alt="DevAvatar" />
           </div>
           <div className='text-5xl flex justify-center py-10 gap-16 text-gray-600'>
             <AiFillLinkedin className="cursor-pointer dark:text-white" onMouseOver={() => setActiveLinkedin('blue')} onMouseLeave={() => setActiveLinkedin("")} color={activeLinkedin ? activeLinkedin : ""} onClick={() => window.open(linkedinUrl)} />
@@ -166,11 +167,20 @@ export default function Home() {
         <section>
           <h3 className='text-3xl py-1 font-burtons dark:text-gray-200'>Projects</h3>
           <div className='lg:flex gap-10'>
-            <div className=' basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
-              <Image src={devAvatar} width={150} height={150} />
+            <div className=' basis-1/3 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
+              <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/>
+              <h3 className='text-lg font-medium pt-8 pb-2'>JavaScript Projects</h3>
+              <p className='py-2 flex-wrap'>
+                
+              </p>
+            </div>
+
+            <div className=' basis-1/3 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
+              <Image src={devAvatar} width={150} height={150}  alt="JavaScript Logo"/>
               <h3 className='text-lg font-medium pt-8 pb-2'>Web Development</h3>
               <p className='py-2 flex-wrap'>
                 Building Web Application
+                
               </p>
               {/* <h4 className='py-4 text-teal-600'>Technology Used</h4>
               <p className='text-gray-800 py-1'>React</p>
@@ -180,11 +190,12 @@ export default function Home() {
               <p className='text-gray-800 py-1'>Bootstrap</p> */}
             </div>
 
-            <div className=' basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
-              <Image src={devAvatar} width={150} height={150} />
+            <div className=' basis-1/3 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
+              <Image src={devAvatar} width={150} height={150}  alt="JavaScript Logo"/>
               <h3 className='text-lg font-medium pt-8 pb-2'>Android Development</h3>
               <p className='py-2'>
                 Building Mobile Application
+                {/* <Link href="/javascript">Click</Link> */}
               </p>
               {/* <h4 className='py-4 text-teal-600'>Technology Used</h4>
               <p className='text-gray-800 py-1'>React Native</p>
