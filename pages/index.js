@@ -97,29 +97,29 @@ export default function Home() {
             
             <div className='basis-1/3 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
               <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/>
-              <h3 className='text-lg font-medium pt-2 pb-2'>Basic Projects</h3>
+              <h3 className='text-lg font-medium px-2'>Basic Projects</h3>
               <p className='py-1 flex-wrap'>
-                Calculator, Find An Activity,
+                Calculator, Find An Activity, A Protfolio
               </p>
-              <Link href="/levelB">View Projects</Link>
+              <Link href="/levelB"><div className='p-2 shadow-md hover:bg-teal-300 font-burtons'>View Projects</div></Link>
             </div>
            
             <div className=' basis-1/3 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
               <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/>
-              <h3 className='text-lg font-medium pt-2 pb-2'>Basic Projects</h3>
+              <h3 className='text-lg font-medium px-2'>Web ApplicationsProjects</h3>
               <p className='py-1 flex-wrap'>
-                Calculator, Find An Activity,
+                Todo App, Movies App, A Portfolio
               </p>
-              <Link href="/levelB">View Projects</Link>
+              <Link href="/levelB"><div className='p-2 shadow-md hover:bg-teal-300 font-burtons'>View Projects</div></Link>
             </div>
 
             <div className=' basis-1/3 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
               <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/>
-              <h3 className='text-lg font-medium pt-2 pb-2'>Basic Projects</h3>
+              <h3 className='text-lg font-medium px-2'>Basic Projects</h3>
               <p className='py-1 flex-wrap'>
                 Calculator, Find An Activity,
               </p>
-              <Link href="/levelB">View Projects</Link>
+               <Link href="/levelB"><div className='p-2 shadow-md hover:bg-teal-300 font-burtons'>View Projects</div></Link>
             </div>
 
           </div>

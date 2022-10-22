@@ -121,7 +121,10 @@ const Calculator = () => {
   const [{ currentOperand, prevOperand, operation }, dispatch] = useReducer(reducer, {});
 
   return (
-    <div className='md:w-1/3 bg-gradient-to-r from-teal-500 to-blue-200 p-5'>
+    <div>
+       <h4 className='p-5 font-burtons text-center dark:text-white'>This is a Calculator i build using JSX and react hooks on a nextJS APP.</h4>
+    <div className='flex justify-center'>
+    <div className='bg-gradient-to-r from-teal-500 to-blue-200 p-5'>
       <div className=' bg-black my-1 rounded-md text-white mb-4'>
         <div className='h-5 text-right'>
           {prevOperand} {operation}          </div>
@@ -148,7 +151,9 @@ const Calculator = () => {
         <DigitButton dispatch={dispatch} digit="9"/>
         <div className='border-2 border-stone-700 col-span-2 hover:bg-sky-200 rounded-md' onClick={()=> dispatch({type: ACTIONS.EVALUATE})}>=</div>
       </div>
-    </div>
+        </div>
+        </div>
+      </div>
   )
 }
 

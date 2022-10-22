@@ -1,25 +1,35 @@
 
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import Calculator from '../../components/Calculator';
 import Activity from '../../components/Activity';
+import Portfolio from '../../components/Portfolio';
 
 const LandingPage = () => {
 
   const [darkMode, setDarkMode] = useState(false);
   const [showCalculator, setShowCalculator] = useState(false);
   const [showActivity, setShowActivity] = useState(false);
+  const [showPortfolio, setShowPortfolio] = useState(false);
 
   const showComponent = (componentName) => {
     switch (componentName) {
       case "calculator":
         setShowCalculator(!showCalculator);
         setShowActivity(false);
+        setShowPortfolio(false);
         break;
       case "activity":
         setShowActivity(!showActivity);
         setShowCalculator(false);
+        setShowPortfolio(false);
+        break;
+      case "portfolio":
+        setShowActivity(false);
+        setShowCalculator(false);
+        setShowPortfolio(!showPortfolio);
+         break;
       default:
         break;
     }
@@ -46,12 +56,14 @@ const LandingPage = () => {
         <div className='flex flex-wrap  m-5 gap-10'>
           <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-gray-600 hover:text-white' onClick={() => showComponent('calculator')}>Calculator</div>
           <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => showComponent('activity')}>Find an Activity</div>
+          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => showComponent('portfolio')}>Protfolio</div>
         </div>
       </section>
 
       <section className='flex justify-center p-10 h-max'>
         {showCalculator && <Calculator />}
         {showActivity && <Activity />}
+        {showPortfolio && <Portfolio/>}
       </section>
     </div>
   </div>)
