@@ -45,7 +45,7 @@ const LandingPage = () => {
           <ul className='flex items-center gap-6'>
             <li>
               <Link href="/">
-                <FcHome />
+                <FcHome className='cursor-pointer' />
               </Link>
             </li>
             <li>
@@ -61,8 +61,8 @@ const LandingPage = () => {
       <section>
         <h2 className='text-4xl mb-5 font-burtons dark:text-white'>Projects</h2>
         <div className='flex flex-wrap  m-5 gap-10'>
-          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-gray-600 hover:text-white' onClick={() => showComponent('calculator')}>Calculator</div>
-          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => showComponent('activity')}>Find an Activity</div>
+          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-gray-600 hover:text-white' onClick={() => showComponent('calculator')}>A Micro-Blogging App</div>
+          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => showComponent('activity')}>A Movie App</div>
           <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => showComponent('portfolio')}>Protfolio</div>
         </div>
       </section>

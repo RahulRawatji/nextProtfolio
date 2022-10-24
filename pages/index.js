@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillGithub, AiFillLinkedin, AiFillMail, AiOutlineReload } from 'react-icons/ai';
 import Link from 'next/link';
+import { FcHome } from "react-icons/fc";
 
 import Image from 'next/image';
 import axios from 'axios';
@@ -44,12 +45,17 @@ export default function Home() {
         <section className='min-h-screen'>
           <nav className='py-10 mb-1 flex justify-between'>
             <h1 className='text-xl font-burtons dark:text-white'>developedbyRahul</h1>
-            <ul className='flex items-center'>
+            <ul className='flex items-center gap-6'>
+              <li>
+                <Link href="/">
+                  <FcHome className='cursor-pointer' />
+                </Link>
+              </li>
               <li>
                 <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer' color={darkMode ? 'white' : ""} />
               </li>
               <li>
-                <a className='bg-gradient-to-r from-cyan-500 to-teal-300 text-white px-4 py-2 rounded-md ml-8' href='https://drive.google.com/file/d/1qplLNSouc4TmfZeDsRnk-UJWeSMPtMPl/view?usp=sharing' rel="noreferrer noopener" target="_blank">Resume</a>
+                <a className='bg-gradient-to-r from-cyan-500 to-teal-300 text-white px-4 py-2 rounded-md ' href='https://drive.google.com/file/d/1qplLNSouc4TmfZeDsRnk-UJWeSMPtMPl/view?usp=sharing' rel="noreferrer noopener" target="_blank">Resume</a>
               </li>
             </ul>
           </nav>
@@ -83,20 +89,20 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className='m-10 p-20 flex-col border-spacing-4 shadow-lg dark:bg-slate-200'>
-          <div className='grid justify-items-end '>
+        <div className='md:m-10 p-20 flex-col border-spacing-4 shadow-lg dark:bg-slate-200'>
+          <div className='grid justify-items-end p-2'>
             <AiOutlineReload onClick={()=>fetchRandomQuote()}/>
           </div>
-          <h2 className='text-5xl font-burtons text-yellow-600 text-center px-10'>" {quoteData.text} "</h2>
-          <p className='text-xl text-center px-20 m-2'>{quoteData.author}</p>
+          <h2 className='md:text-5xl sm:text-4xl  font-burtons text-yellow-600 text-center md:px-10'>" {quoteData.text} "</h2>
+          <p className='md:text-xl text-center px-20 m-2'>{quoteData.author}</p>
         </div>
 
-        <section>
+        <section className=' mt-4'>
           <h3 className='text-3xl py-1 font-burtons dark:text-gray-200'>Projects</h3>
           <div className='lg:flex gap-10'>
             
-            <div className='basis-1/3 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
-              <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/>
+            <div className='basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
+              {/* <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/> */}
               <h3 className='text-lg font-medium px-2'>Basic Projects</h3>
               <p className='py-1 flex-wrap'>
                 Calculator, Find An Activity, A Protfolio
@@ -104,23 +110,23 @@ export default function Home() {
               <Link href="/levelB"><div className='p-2 shadow-md hover:bg-teal-300 font-burtons'>View Projects</div></Link>
             </div>
            
-            <div className=' basis-1/3 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
-              <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/>
-              <h3 className='text-lg font-medium px-2'>Web ApplicationsProjects</h3>
+            <div className=' basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
+              {/* <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/> */}
+              <h3 className='text-lg font-medium px-2'>Web Applications Projects</h3>
               <p className='py-1 flex-wrap'>
-                Todo App, Movies App, A Portfolio
+                Micro Blogging App, Movies App, A Portfolio
               </p>
-              <Link href="/levelB"><div className='p-2 shadow-md hover:bg-teal-300 font-burtons'>View Projects</div></Link>
+              <Link href="/levelA"><div className='p-2 shadow-md hover:bg-teal-300 font-burtons'>View Projects</div></Link>
             </div>
 
-            <div className=' basis-1/3 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
+            {/* <div className=' basis-1/3 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
               <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/>
               <h3 className='text-lg font-medium px-2'>Basic Projects</h3>
               <p className='py-1 flex-wrap'>
                 Calculator, Find An Activity,
               </p>
                <Link href="/levelB"><div className='p-2 shadow-md hover:bg-teal-300 font-burtons'>View Projects</div></Link>
-            </div>
+            </div> */}
 
           </div>
         </section>
