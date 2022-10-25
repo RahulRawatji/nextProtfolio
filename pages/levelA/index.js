@@ -25,7 +25,7 @@ const LandingPage = () => {
       case "movieApp":
         portfolioImage = "https://user-images.githubusercontent.com/93177337/139305542-64c80736-7068-4993-b00c-f19fee6a3a4e.jpg";
         portfolioUrl = "https://micro-blogging-app.vercel.app/";
-        portfolioGithubUrl = "https://github.com/RahulRawatji/movies-appp";
+        portfolioGithubUrl = "https://github.com/RahulRawatji/movies-app";
         description = `A Simple Movie Made using ReactJs and NodeJs`;
         break;
       case "portfolio":
