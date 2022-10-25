@@ -3,39 +3,49 @@ import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useState } from 'react';
 import Link from 'next/link';
 import { FcHome } from "react-icons/fc";
-
-import Calculator from '../../components/Calculator';
-import Activity from '../../components/Activity';
-import Portfolio from '../../components/Portfolio';
+import Image from 'next/image';
 
 const LandingPage = () => {
 
   const [darkMode, setDarkMode] = useState(false);
-  const [showCalculator, setShowCalculator] = useState(false);
-  const [showActivity, setShowActivity] = useState(false);
-  const [showPortfolio, setShowPortfolio] = useState(false);
+  const [showComponent, setShowComponent] = useState("");
 
-  const showComponent = (componentName) => {
-    switch (componentName) {
-      case "calculator":
-        setShowCalculator(!showCalculator);
-        setShowActivity(false);
-        setShowPortfolio(false);
+  const renderProject = (projectName) => {
+    let portfolioImage = "";
+    let portfolioUrl = "";
+    let portfolioGithubUrl = "";
+
+    switch (projectName) {
+      case "blogApp":
+        portfolioImage = "https://user-images.githubusercontent.com/93177337/197684158-385b98f0-12b5-4e17-8973-ea38708df472.png";
+        portfolioUrl = "https://micro-blogging-app.vercel.app/";
+        portfolioGithubUrl = "https://github.com/RahulRawatji/micro-blogging-app";
         break;
-      case "activity":
-        setShowActivity(!showActivity);
-        setShowCalculator(false);
-        setShowPortfolio(false);
+      case "movieApp":
+        portfolioImage = "https://user-images.githubusercontent.com/93177337/139305542-64c80736-7068-4993-b00c-f19fee6a3a4e.jpg";
+        portfolioUrl = "https://micro-blogging-app.vercel.app/";
+        portfolioGithubUrl = "https://github.com/RahulRawatji/movies-appp";
         break;
       case "portfolio":
-        setShowActivity(false);
-        setShowCalculator(false);
-        setShowPortfolio(!showPortfolio);
-         break;
+        portfolioImage = "https://user-images.githubusercontent.com/93177337/197675807-1207493d-0ed1-4ddb-90e0-b73cc4b23b7c.png";
+        portfolioUrl = "https://next-protfolio-rahulrawatji.vercel.app/";
+        portfolioGithubUrl = "https://github.com/RahulRawatji/nextProtfolio";
+        break;
+      
       default:
         break;
     }
+    return (<div className='flex-col m-5 md:w-1/2 justify-center items-center'>
+        <div className='w-full'>
+        <img src={portfolioImage} className="object-cover" />
+        </div>
+        <div className='flex gap-4 justify-center mt-3'>
+          {projectName !== 'movieApp'? <button onClick={()=> window.open(portfolioUrl)} className=' shadow-lg px-4 text-center py-1 text-[1.25rem] font-burtons  bg-cyan-500 dark:text-white rounded-lg'>Preview</button>: ''}
+          <button onClick={()=>window.open(portfolioGithubUrl)} className='px-4 text-center py-1 text-[1.25rem] drop-shadow-lg font-burtons  bg-cyan-500 rounded-lg dark:text-white'>Code</button>
+        </div>
+      </div>)
   }
+
   return (<div className={darkMode ? "dark" : ""}>
     <div className='bg-white px-10 h-screen w-screen dark:bg-gray-800'>
 
@@ -61,16 +71,14 @@ const LandingPage = () => {
       <section>
         <h2 className='text-4xl mb-5 font-burtons dark:text-white'>Projects</h2>
         <div className='flex flex-wrap  m-5 gap-10'>
-          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-gray-600 hover:text-white' onClick={() => showComponent('calculator')}>A Micro-Blogging App</div>
-          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => showComponent('activity')}>A Movie App</div>
-          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => showComponent('portfolio')}>Protfolio</div>
+          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => setShowComponent('blogApp')}>A Micro-Blogging App</div>
+          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => setShowComponent('movieApp')}>A Movie App</div>
+          <div className='shadow-lg rounded-md bg-white drop-shadow-lg p-3 font-bold hover:bg-sky-200' onClick={() => setShowComponent('portfolio')}>Protfolio</div>
         </div>
       </section>
 
-      <section className='flex justify-center p-10 h-max'>
-        {showCalculator && <Calculator />}
-        {showActivity && <Activity />}
-        {showPortfolio && <Portfolio/>}
+      <section className='flex justify-center md:p-10 h-max'>
+        {showComponent && renderProject(showComponent)}
       </section>
     </div>
   </div>)
