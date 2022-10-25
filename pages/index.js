@@ -139,8 +139,8 @@ export default function Home() {
           <p className='md:text-xl md:p-5 text-center w-80 text-cyan-500'>
             `I am a dedicated and diligent individual toward the world of computers.
             having a self driven attitude to embrace new tools and skills.
-            i have niche towards web-development.living life, having fun, enjoying the sunsets.
-            i like tea, music, dance and nature.`
+            i have niche towards web-development. Living life, having fun, enjoying the sunsets.
+            tea, music, dance and nature.`
             </p>
             <img className="w-1/4 rounded-full border-4 "src={"https://media-exp1.licdn.com/dms/image/D4D35AQEtmtt_R8e6qg/profile-framedphoto-shrink_400_400/0/1666102876159?e=1667275200&v=beta&t=gbC2Y5HZBQHKVkRo1b99mNy7ZLHaCp3Orzrq4imDJJI"}>
             </img>
