@@ -39,7 +39,7 @@ export default function Home() {
       <Head>
         <title>Rahul Rawat Protfolio</title>
         <meta name="description" content="Protfolio Website" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon-n.ico" type="image/x-icon" />
       </Head>
       <main className='bg-white px-10  dark:bg-gray-800'>
         <section className='min-h-screen'>

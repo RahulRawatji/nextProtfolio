@@ -1,4 +1,5 @@
 
+import Head from 'next/head'
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useState } from 'react';
 import Link from 'next/link';
@@ -37,6 +38,11 @@ const LandingPage = () => {
     }
   }
   return (<div className={darkMode ? "dark" : ""}>
+    <Head>
+        <title>Rahul Rawat Protfolio</title>
+        <meta name="description" content="Projects" />
+        <link rel="icon" href="/favicon-n.ico" type="image/x-icon" />
+      </Head>
     <div className='bg-white px-10 h-screen w-screen dark:bg-gray-800'>
 
       <section>
