@@ -67,16 +67,16 @@ export default function Home() {
             </p>
           </div>
           <div className='relative w-80 h-80 mx-auto'>
-            <Image className="rounded-full" src={devAvatar} layout='fill'  alt="DevAvatar" />
+            <Image className="rounded-full" src={devAvatar} layout='fill' alt="DevAvatar" />
           </div>
           <div className='text-5xl flex justify-center py-10 gap-16 text-gray-600'>
-            <AiFillLinkedin className="cursor-pointer dark:text-white" onMouseOver={() => setActiveLinkedin('blue')} onMouseLeave={() => setActiveLinkedin("")} color={activeLinkedin ? activeLinkedin : ""} onClick={() => window.open(linkedinUrl)} />
-            <AiFillGithub className="cursor-pointer dark:text-white" onMouseOver={() => setActiveGithub('black')} onMouseLeave={() => setActiveGithub("")} color={activeGithub ? activeGithub : ""} onClick={() => window.open(githubUrl)} />
-            <AiFillMail className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
+            <AiFillLinkedin title="LinkedIn Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveLinkedin('blue')} onMouseLeave={() => setActiveLinkedin("")} color={activeLinkedin ? activeLinkedin : ""} onClick={() => window.open(linkedinUrl)} />
+            <AiFillGithub title="Github Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveGithub('black')} onMouseLeave={() => setActiveGithub("")} color={activeGithub ? activeGithub : ""} onClick={() => window.open(githubUrl)} />
+            <AiFillMail  title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
           </div>
         </section>
 
-        <TechnologyUsed/>
+        <TechnologyUsed />
 
         <section>
           <div>
@@ -89,55 +89,75 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <div className='md:m-10 p-20 flex-col border-spacing-4 shadow-lg dark:bg-slate-200'>
           <div className='grid justify-items-end p-2'>
-            <AiOutlineReload onClick={()=>fetchRandomQuote()}/>
+            <AiOutlineReload onClick={() => fetchRandomQuote()} />
           </div>
-          <h2 className='md:text-5xl sm:text-4xl  font-burtons text-yellow-600 text-center md:px-10'>" {quoteData.text} "</h2>
-          <p className='md:text-xl text-center px-20 m-2'>{quoteData.author}</p>
+          <h2 className='md:text-5xl sm:text-4xl  font-burtons text-yellow-600 text-center md:px-10'>
+            "{quoteData.text} "
+          </h2>
+          <p className='md:text-xl text-center px-20 m-2'>
+            {quoteData.author}
+          </p>
         </div>
 
         <section className=' mt-4'>
           <h3 className='text-3xl py-1 font-burtons dark:text-gray-200'>Projects</h3>
           <div className='lg:flex gap-10'>
-            
-            <div className='basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
-              {/* <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/> */}
-              <h3 className='text-lg font-medium px-2'>Basic Projects</h3>
+
+            <div className='basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 bg-slate-100 '>
+              <h3 className='text-xl font-bold px-2'>Basic Projects</h3>
               <p className='py-1 flex-wrap'>
                 Calculator, Find An Activity, A Protfolio
               </p>
-              <Link href="/levelB"><div className='p-2 shadow-md hover:bg-teal-300 font-burtons'>View Projects</div></Link>
+              <Link href="/levelB">
+                <div className='p-2 shadow-md mt-3 hover:bg-teal-300 font-burtons cursor-pointer'>
+                  View Projects
+                </div>
+              </Link>
             </div>
-           
-            <div className=' basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
-              {/* <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/> */}
-              <h3 className='text-lg font-medium px-2'>Web Applications Projects</h3>
+
+            <div className=' basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 bg-slate-100 '>
+              <h3 className='text-xl font-bold px-2'>Web Applications Projects</h3>
               <p className='py-1 flex-wrap'>
                 Micro Blogging App, Movies App, A Portfolio
               </p>
-              <Link href="/levelA"><div className='p-2 shadow-md hover:bg-teal-300 font-burtons'>View Projects</div></Link>
+              <Link href="/levelA">
+                <div className='p-2 shadow-md hover:bg-teal-300 mt-3 font-burtons cursor-pointer'>
+                  View Projects
+                </div>
+              </Link>
             </div>
-
-            {/* <div className=' basis-1/3 text-center shadow-lg p-10 rounded-xl my-5 dark:bg-gray-600'>
-              <Image src={devAvatar} width={150} height={150} alt="JavaScript Logo"/>
-              <h3 className='text-lg font-medium px-2'>Basic Projects</h3>
-              <p className='py-1 flex-wrap'>
-                Calculator, Find An Activity,
-              </p>
-               <Link href="/levelB"><div className='p-2 shadow-md hover:bg-teal-300 font-burtons'>View Projects</div></Link>
-            </div> */}
 
           </div>
         </section>
-    
-        <div className='border-spacing-4 shadow-lg p-10 m-5 rounded-xl dark:bg-slate-200'>
+
+        <section className='border-spacing-4 shadow-lg font-burtons p-10 m-5 rounded-xl dark:bg-slate-200'>
+          <h3 className='text-3xl py-1 mb-3 '>About me!</h3> 
+          <div className='flex flex-wrap gap-4 justify-around md:p-5 bg-slate-100 rounded-lg shadow-lg '>
+          <p className='md:text-xl md:p-5 text-center w-80 text-cyan-500'>
+            `I am a dedicated and diligent individual toward the world of computers.
+            having a self driven attitude to embrace new tools and skills.
+            i have niche towards web-development.living life, having fun, enjoying the sunsets.
+            i like tea, music, dance and nature.`
+            </p>
+            <img className="w-1/4 rounded-full border-4 "src={"https://media-exp1.licdn.com/dms/image/D4D35AQEtmtt_R8e6qg/profile-framedphoto-shrink_400_400/0/1666102876159?e=1667275200&v=beta&t=gbC2Y5HZBQHKVkRo1b99mNy7ZLHaCp3Orzrq4imDJJI"}>
+            </img>
+          </div>
+        </section>
+
+        <div className='border-spacing-4 shadow-lg p-10 m-5 rounded-xl font-burtons dark:bg-slate-200'>
           <h3 className='text-3xl py-1 mb-3 '>Reach Out to me!</h3>
           <div className='font-burtons p-5 text-10md flex-col '>
-            <h3 className='m-4' >Associate Software Engineer @BYJU's | Still Finding 💭</h3>
-            <h3 className='m-4'>Open for opportunities: <span className='text-red-500 text-5xl'>Yes</span></h3>
+            <div className='flex items-center gap-5'>
+              <h3 className='m-4' >Associate Software Engineer @BYJU's 💭</h3>
+              <h3 className='m-4'>Open for opportunities: <span className='text-red-500 text-4xl'>Yes</span></h3>
+              <h3 className='m-4'>Mail: <span className='text-red-500 text-2xl'><a>rahulrawatwork@gmail.com</a></span></h3>
+            </div>
           </div>
         </div>
+
       </main>
     </div>
 
