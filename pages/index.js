@@ -149,11 +149,11 @@ export default function Home() {
 
         <div className='border-spacing-4 shadow-lg p-10 m-5 rounded-xl font-burtons dark:bg-slate-200'>
           <h3 className='text-3xl py-1 mb-3 '>Reach Out to me!</h3>
-          <div className='font-burtons p-5 text-10md flex-col '>
-            <div className='flex items-center gap-5'>
+          <div className='font-burtons p-5 md:text-10md flex-col '>
+            <div className='flex items-center flex-wrap gap-5'>
               <h3 className='m-4' >Associate Software Engineer @BYJU's 💭</h3>
               <h3 className='m-4'>Open for opportunities: <span className='text-red-500 text-4xl'>Yes</span></h3>
-              <h3 className='m-4'>Mail: <span className='text-red-500 text-2xl'><a>rahulrawatwork@gmail.com</a></span></h3>
+              <h3 className='m-4'>Mail: <span className='text-red-500 md:text-2xl'><a>rahulrawatwork@gmail.com</a></span></h3>
             </div>
           </div>
         </div>
