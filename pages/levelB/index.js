@@ -45,7 +45,7 @@ const LandingPage = () => {
           <ul className='flex items-center gap-6'>
             <li>
               <Link href="/">
-                <FcHome />
+                <FcHome className='cursor-pointer' />
               </Link>
             </li>
             <li>
