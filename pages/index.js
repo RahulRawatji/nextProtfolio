@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react';
 
 import devAvatar from '../public/devAvatar.png';
 import TechnologyUsed from '../components/TechnologyUsed';
+import Avatar from '../public/avatar.jpg';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -19,7 +20,6 @@ export default function Home() {
   const [activeLinkedin, setActiveLinkedin] = useState("");
   const [activeGithub, setActiveGithub] = useState("");
   const [activeMail, setActiveMail] = useState("");
-  const [rotate, setRotate] = useState();
 
   useEffect(() => {
     fetchRandomQuote();
@@ -135,15 +135,14 @@ export default function Home() {
 
         <section className='border-spacing-4 shadow-lg font-burtons p-10 m-5 rounded-xl dark:bg-slate-200'>
           <h3 className='text-3xl py-1 mb-3 '>About me!</h3> 
-          <div className='flex flex-wrap gap-4 justify-around md:p-5 bg-slate-100 rounded-lg shadow-lg '>
-          <p className='md:text-xl md:p-5 text-center w-80 text-cyan-500'>
+          <div className='flex flex-wrap gap-4 justify-around md:p-5  rounded-lg shadow-lg '>
+          <p className='md:text-xl md:p-5 text-center w-80 text-gray-700'>
             `I am a dedicated and diligent individual toward the world of computers.
             having a self driven attitude to embrace new tools and skills.
             i have niche towards web-development. Living life, having fun, enjoying the sunsets.
             tea, music, dance and nature.`
             </p>
-            <img className="w-1/4 rounded-full border-4 "src={"https://media-exp1.licdn.com/dms/image/D4D35AQEtmtt_R8e6qg/profile-framedphoto-shrink_400_400/0/1666102876159?e=1667275200&v=beta&t=gbC2Y5HZBQHKVkRo1b99mNy7ZLHaCp3Orzrq4imDJJI"}>
-            </img>
+            <Image className="rounded-full border-4" alt="DevAvatar" width={350} height={10} objectFit='cover'  src={Avatar}/>
           </div>
         </section>
 
