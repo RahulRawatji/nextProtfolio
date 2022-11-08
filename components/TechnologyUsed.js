@@ -11,70 +11,70 @@ const TechnologyUsed = () => {
           <div className='mb-2'>
             <h3 className='text-3xl py-1 font-burtons dark:text-white'>Technology I Use</h3>
           </div>
-          <div className='flex flex-wrap gap-8 justify-center'>
+          <div className='flex flex-wrap gap-3 justify-center'>
             <motion.div whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>ReactJs</h3>
-              <DiReact size="80" color='#61DBFB' />
+              <DiReact size="65" color='#61DBFB' />
             </motion.div>
             <motion.div whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>NodeJs</h3>
-              <DiNodejsSmall size="80" color='#3C873A' />
+              <DiNodejsSmall size="65" color='#3C873A' />
             </motion.div>
             <motion.div whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>Bootstrap</h3>
-              <DiBootstrap size="80" color='purple' />
+              <DiBootstrap size="65" color='purple' />
             </motion.div>
             <motion.div  whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>JavaScript</h3>
-              <DiJsBadge size="80" color='#f0db4f' />
+              <DiJsBadge size="65" color='#f0db4f' />
             </motion.div>
             <motion.div  whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>HTML</h3>
-              <DiHtml5 size="80" />
+              <DiHtml5 size="65" />
             </motion.div>
             <motion.div  whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>CSS</h3>
-              <DiCss3 size="80" color='orange' />
+              <DiCss3 size="65" color='orange' />
             </motion.div>
             <motion.div  whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>React Native</h3>
-              <DiAtom size="80" color='#61DBFB' />
+              <DiAtom size="65" color='#61DBFB' />
             </motion.div>
             <motion.div  whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>ExpressJs</h3>
-              <SiExpress size="80" />
+              <SiExpress size="65" />
             </motion.div>
             <motion.div whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>Github</h3>
-              <DiGithubBadge size="80" />
+              <DiGithubBadge size="65" />
             </motion.div>
             <motion.div  whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}}className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>Typescript</h3>
-              <SiTypescript size="80" color='#007acc' />
+              <SiTypescript size="65" color='#007acc' />
             </motion.div>
             <motion.div whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>NextJs</h3>
-              <TbBrandNextjs size="80" />
+              <TbBrandNextjs size="65" />
             </motion.div>
             <motion.div whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>Serverless</h3>
-              <SiServerless size="80" color='#c2232a' />
+              <SiServerless size="65" color='#c2232a' />
             </motion.div>
             <motion.div  whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>TailwindCSS</h3>
-              <SiTailwindcss size="80" color='#007acc'/>
+              <SiTailwindcss size="65" color='#007acc'/>
             </motion.div>
             <motion.div  whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>Material UI</h3>
-              <SiMaterialui size="80" color='#009fc0'/>
+              <SiMaterialui size="65" color='#009fc0'/>
             </motion.div>
             <motion.div  whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>Jest</h3>
-              <SiJest size="80" />
+              <SiJest size="65" />
             </motion.div>
             <motion.div  whileHover={{ scale:1.1, boxShadow: "5px 5px 5px rgb( 53, 210, 249)"}} className='text-center shadow-lg rounded-xl p-5 grid justify-items-center dark:bg-gray-600'>
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>PostgreSQL</h3>
-              <SiPostgresql size="80" />
+              <SiPostgresql size="65" color='#009fc0'/>
             </motion.div>
 
           </div>
