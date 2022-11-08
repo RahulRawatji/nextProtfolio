@@ -7,7 +7,7 @@ import { FcHome } from "react-icons/fc";
 import Image from 'next/image';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll} from 'framer-motion';
 
 import devAvatar from '../public/devAvatar.png';
 import TechnologyUsed from '../components/TechnologyUsed';
@@ -21,7 +21,8 @@ export default function Home() {
   const [activeLinkedin, setActiveLinkedin] = useState("");
   const [activeGithub, setActiveGithub] = useState("");
   const [activeMail, setActiveMail] = useState("");
-
+  const { scrollYProgress } = useScroll();
+  
   useEffect(() => {
     fetchRandomQuote();
   }, [])
@@ -43,6 +44,7 @@ export default function Home() {
         <link rel="icon" href="/favicon-n.ico" type="image/x-icon" />
       </Head>
       <motion.main className='bg-white px-10  dark:bg-gray-800' initial={{ x: -300, opacity: 0 }} transition={{ ease: "easeOut", duration: 0.7 }} animate={{ x: 0, opacity: 1 }}>
+      <motion.div style={{ scaleX: scrollYProgress,  position: "fixed", background: "#C70039", top: 0, left: 0, right: 0, height: 10, transformOrigin: 0 }} /> 
         <section className='min-h-screen'>
           <nav className='py-10 mb-1 flex justify-between'>
             <h1 className='text-xl font-burtons dark:text-white'>developedbyRahul</h1>
