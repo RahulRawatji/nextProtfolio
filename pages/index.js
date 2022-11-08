@@ -7,6 +7,7 @@ import { FcHome } from "react-icons/fc";
 import Image from 'next/image';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 import devAvatar from '../public/devAvatar.png';
 import TechnologyUsed from '../components/TechnologyUsed';
@@ -41,7 +42,7 @@ export default function Home() {
         <meta name="description" content="Protfolio Website" />
         <link rel="icon" href="/favicon-n.ico" type="image/x-icon" />
       </Head>
-      <main className='bg-white px-10  dark:bg-gray-800'>
+      <motion.main className='bg-white px-10  dark:bg-gray-800' initial={{ x: -300, opacity: 0 }} transition={{ ease: "easeOut", duration: 0.7 }} animate={{ x: 0, opacity: 1 }}>
         <section className='min-h-screen'>
           <nav className='py-10 mb-1 flex justify-between'>
             <h1 className='text-xl font-burtons dark:text-white'>developedbyRahul</h1>
@@ -72,7 +73,7 @@ export default function Home() {
           <div className='text-5xl flex justify-center py-10 gap-16 text-gray-600'>
             <AiFillLinkedin title="LinkedIn Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveLinkedin('blue')} onMouseLeave={() => setActiveLinkedin("")} color={activeLinkedin ? activeLinkedin : ""} onClick={() => window.open(linkedinUrl)} />
             <AiFillGithub title="Github Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveGithub('black')} onMouseLeave={() => setActiveGithub("")} color={activeGithub ? activeGithub : ""} onClick={() => window.open(githubUrl)} />
-            <AiFillMail  title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
+            <AiFillMail title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
           </div>
         </section>
 
@@ -134,15 +135,15 @@ export default function Home() {
         </section>
 
         <section className='border-spacing-4 shadow-lg font-burtons p-10 m-5 rounded-xl dark:bg-slate-200'>
-          <h3 className='text-3xl py-1 mb-3 '>About me!</h3> 
+          <h3 className='text-3xl py-1 mb-3 '>About me!</h3>
           <div className='flex flex-wrap gap-4 justify-around md:p-5  rounded-lg shadow-lg '>
-          <p className='md:text-xl md:p-5 text-center w-80 text-gray-700'>
-            `I am a dedicated and diligent individual toward the world of computers.
-            having a self driven attitude to embrace new tools and skills.
-            i have niche towards web-development. Living life, having fun, enjoying the sunsets.
-            tea, music, dance and nature.`
+            <p className='md:text-xl md:p-5 text-center w-80 text-gray-700'>
+              `I am a dedicated and diligent individual toward the world of computers.
+              having a self driven attitude to embrace new tools and skills.
+              i have niche towards web-development. Living life, having fun, enjoying the sunsets.
+              tea, music, dance and nature.`
             </p>
-            <Image className="rounded-full border-4" alt="DevAvatar" width={350} height={10} objectFit='cover'  src={Avatar}/>
+            <Image className="rounded-full border-4" alt="DevAvatar" width={350} height={10} objectFit='cover' src={Avatar} />
           </div>
         </section>
 
@@ -157,7 +158,7 @@ export default function Home() {
           </div>
         </div>
 
-      </main>
+      </motion.main>
     </div>
 
   )
