@@ -1,50 +1,34 @@
-import Head from 'next/head'
+
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { AiFillGithub, AiFillLinkedin, AiFillMail, AiOutlineReload } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from 'react-icons/ai';
 import Link from 'next/link';
 import { FcHome } from "react-icons/fc";
 
 import Image from 'next/image';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import { motion, useScroll} from 'framer-motion';
+import { useState } from 'react';
+import { motion, useScroll } from 'framer-motion';
 
 import devAvatar from '../public/devAvatar.png';
 import TechnologyUsed from '../components/TechnologyUsed';
 import Avatar from '../public/avatar.jpg';
+import Header from '../components/Header';
+import RandomQuote from '../components/RandomQuote';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-  const [quoteData, setQuoteData] = useState({});
   const linkedinUrl = "https://www.linkedin.com/in/rahul-rawat21";
   const githubUrl = "https://github.com/RahulRawatji";
   const [activeLinkedin, setActiveLinkedin] = useState("");
   const [activeGithub, setActiveGithub] = useState("");
   const [activeMail, setActiveMail] = useState("");
   const { scrollYProgress } = useScroll();
+
   
-  useEffect(() => {
-    fetchRandomQuote();
-  }, [])
-
-  const fetchRandomQuote = async () => {
-
-    const response = await axios("https://type.fit/api/quotes");
-    const data = response.data;
-    const randomNumber = Math.floor(Math.random() * 1643);
-
-    setQuoteData(data[randomNumber]);
-  };
-
   return (
     <div className={darkMode ? "dark" : ""}>
-      <Head>
-        <title>Rahul Rawat Protfolio</title>
-        <meta name="description" content="Protfolio Website" />
-        <link rel="icon" href="/favicon-n.ico" type="image/x-icon" />
-      </Head>
+      <Header />
       <motion.main className='bg-white px-10  dark:bg-gray-800' initial={{ x: -300, opacity: 0 }} transition={{ ease: "easeOut", duration: 0.7 }} animate={{ x: 0, opacity: 1 }}>
-      <motion.div style={{ scaleX: scrollYProgress,  position: "fixed", background: "#C70039", top: 0, left: 0, right: 0, height: 10, transformOrigin: 0 }} /> 
+        <motion.div style={{ scaleX: scrollYProgress, position: "fixed", background: "#C70039", top: 0, left: 0, right: 0, height: 10, transformOrigin: 0 }} />
         <section className='min-h-screen'>
           <nav className='py-10 mb-1 flex justify-between'>
             <h1 className='text-xl font-burtons dark:text-white'>developedbyRahul</h1>
@@ -63,7 +47,7 @@ export default function Home() {
             </ul>
           </nav>
           <div className='text-center'>
-            <h2 className='text-5xl py-2 mb-2 text-teal-500 font-medium'>Hi, I'm Rahul👋</h2>
+            <h2 className='text-5xl py-2 mb-2 text-teal-500 font-medium'>Hi, I'm Rahul 👋</h2>
             <h2 className='text-2xl font-burtons dark:text-white'>Software Engineer </h2>
             <p className='text-xl py-3 font-burtons leading-8 text-gray-800 sm:text-md dark:text-white'>
               Delivering complex products in less time with high quality
@@ -93,17 +77,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className='md:m-10 p-20 flex-col border-spacing-4 shadow-lg dark:bg-slate-200'>
-          <div className='grid justify-items-end p-2'>
-            <AiOutlineReload onClick={() => fetchRandomQuote()} />
-          </div>
-          <h2 className='md:text-5xl sm:text-4xl  font-burtons text-yellow-600 text-center md:px-10'>
-            "{quoteData.text} "
-          </h2>
-          <p className='md:text-xl text-center px-20 m-2'>
-            {quoteData.author}
-          </p>
-        </div>
+       <RandomQuote/>
 
         <section className=' mt-4'>
           <h3 className='text-3xl py-1 font-burtons dark:text-gray-200'>Projects</h3>

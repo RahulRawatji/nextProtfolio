@@ -5,9 +5,11 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { motion } from 'framer-motion';
 
 const TechnologyUsed = () => {
-  const technologyData = [{}]
+  const technologyData = [{}];
+
   return (
-    <section className='mb-10'>
+    <section className='mb-10' >
+        <div className='m-5'>
           <div className='mb-2'>
             <h3 className='text-3xl py-1 font-burtons dark:text-white'>Technology I Use</h3>
           </div>
@@ -76,7 +78,7 @@ const TechnologyUsed = () => {
               <h3 className='text-lg font-medium mb-1 dark:text-gray-200'>PostgreSQL</h3>
               <SiPostgresql size="65" color='#009fc0'/>
             </motion.div>
-
+            </div>
           </div>
         </section>
   )
