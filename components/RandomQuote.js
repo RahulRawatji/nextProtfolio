@@ -5,11 +5,11 @@ import { useInView ,motion } from 'framer-motion';
 
 const RandomQuote = () => {
   const [quoteData, set] = useState({});
-  const ref = useRef(null);
-  const isInView = useInView(ref,{
-    margin: "0% 0% -40% 0%",
-    once: true
-  });
+  // const ref = useRef(null);
+  // const isInView = useInView(ref,{
+  //   margin: "0% 0% -40% 0%",
+  //   once: true
+  // });
 
   useEffect(() => {
     fetchRandomQuote();
@@ -25,7 +25,7 @@ const RandomQuote = () => {
   };
 
   return (
-    <motion.div ref={ref}  animate={{ x: isInView ? 0: 1100 }}  transition={{ ease: "easeIn", duration: 0.7 }} className='md:m-10 p-20 flex-col border-spacing-4 shadow-lg dark:bg-slate-200'>
+    <motion.div className='md:m-10 p-20 flex-col border-spacing-4 shadow-lg dark:bg-slate-200'>
     <div className='grid justify-items-end p-2'>
       <AiOutlineReload onClick={() => fetchRandomQuote()} />
     </div>
