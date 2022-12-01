@@ -6,7 +6,7 @@ import { FcHome } from "react-icons/fc";
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { motion, useScroll } from 'framer-motion';
+import { delay, motion, useScroll } from 'framer-motion';
 
 import devAvatar from '../public/devAvatar.png';
 import TechnologyUsed from '../components/TechnologyUsed';
@@ -29,8 +29,30 @@ export default function Home() {
       <Header />
       <motion.main className='bg-white dark:bg-gray-800' initial={{ x: -300, opacity: 0 }} transition={{ ease: "easeOut", duration: 0.7 }} animate={{ x: 0, opacity: 1 }}>
         <motion.div style={{ scaleX: scrollYProgress, position: "fixed", background: "#C70039", top: 0, left: 0, right: 0, height: 10, transformOrigin: 0 }} />
-          <nav className='py-10 mb-1 flex justify-between'>
-            <h1 className='text-xl font-burtons dark:text-white px-10'>developedbyRahul</h1>
+
+          <div className='intro'>
+            <motion.div className='intro-col-two' initial={{ x: 800  }} transition={{ ease: 'linear',duration: 3 }} animate={{ x: 50 ,opacity: 1 }}>
+              <Image src={require('../public/naruto.gif')} height={200} />
+              {/* <div className=''>
+                  <p className='intro-text'>I AM A SOFTWARE ENGINEER BASED IN UK.
+                  CURRENTLY WORKING AS A FREELANCER.
+              </p>
+              </div> */}
+            </motion.div>
+            <motion.div className='intro-col-one' initial={{ x: 400, opacity: 0 }} transition={{ ease: 'linear', duration: 2.5, delay:0.5 }} animate={{ x: 0, opacity: 1 }}>
+              <h3 className='intro-headding'>HELLO, MY NAME IS</h3>
+              <motion.h1 className='intro-name' transition={{scale:2}}>RAHUL RAWAT</motion.h1>
+              
+              <div className='text-5xl flex justify-center gap-16 text-gray-600'>
+                <AiFillLinkedin title="LinkedIn Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveLinkedin('blue')} onMouseLeave={() => setActiveLinkedin("")} color={activeLinkedin ? activeLinkedin : ""} onClick={() => window.open(linkedinUrl)} />
+                <AiFillGithub title="Github Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveGithub('black')} onMouseLeave={() => setActiveGithub("")} color={activeGithub ? activeGithub : ""} onClick={() => window.open(githubUrl)} />
+                <AiFillMail title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
+              </div>
+            </motion.div>
+          </div>
+
+    <nav className='py-10 flex justify-between'>
+            <span className='font-burtons mx-5 text-xl'>developedBy<span className='headChar text-3xl'>R</span></span>
             <ul className='flex items-center gap-6 px-10'>
               <li>
                 <Link href="/">
@@ -46,26 +68,6 @@ export default function Home() {
             </ul>
           </nav>
 
-          <div className='intro'>
-            <motion.div className='intro-col-two' initial={{ x: 800 }} transition={{ ease: 'linear',duration: 3 }} animate={{ x: 50, opacity: 1 }}>
-              <Image src={require('../public/naruto.gif')} height={450} />
-              {/* <div className=''>
-                  <p className='intro-text'>I AM A SOFTWARE ENGINEER BASED IN UK.
-                  CURRENTLY WORKING AS A FREELANCER.
-              </p>
-              </div> */}
-            </motion.div>
-            <motion.div className='intro-col-one' initial={{ x: 400 }} transition={{ ease: 'linear', duration: 2 }} animate={{ x: 0, opacity: 1 }}>
-              <h3 className='intro-headding'>HELLO, MY NAME IS</h3>
-              <h1 className='intro-name'>RAHUL RAWAT</h1>
-              
-              <div className='text-5xl flex justify-center gap-16 text-gray-600'>
-                <AiFillLinkedin title="LinkedIn Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveLinkedin('blue')} onMouseLeave={() => setActiveLinkedin("")} color={activeLinkedin ? activeLinkedin : ""} onClick={() => window.open(linkedinUrl)} />
-                <AiFillGithub title="Github Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveGithub('black')} onMouseLeave={() => setActiveGithub("")} color={activeGithub ? activeGithub : ""} onClick={() => window.open(githubUrl)} />
-                <AiFillMail title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
-              </div>
-            </motion.div>
-          </div>
 
         <TechnologyUsed />
 

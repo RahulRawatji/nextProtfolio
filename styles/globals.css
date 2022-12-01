@@ -35,17 +35,28 @@ a {
   src: url('../public/font/ActionComics.ttf');
 }
 
+nav{
+  position: sticky;
+  top:0;
+  background-image: linear-gradient(white, hsla(0, 85%, 58%, 0.76));
+}
+
+.headChar{
+  font-family: 'action-comic';
+}
 .intro{
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
-  height: 70vh;
+  gap:5rem;
+  height: 85vh;
 }
 
 .intro-col-two{
   display: flex;
   gap: 2rem;
   z-index: 1;
+  justify-content: center;
 }
 
 .intro-col-one{
@@ -53,8 +64,9 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap:3rem;
-  padding: 8%;
+  /* background-color: hsla(0, 85%, 58%, 0.666); */
+  border-radius: 10%;
+  margin: 5%;
 }
 
 .intro-headding{
@@ -78,7 +90,7 @@ a {
   justify-content: space-around;
   gap: 1.5rem;
 }
-@media (max-width:420px){
+@media (max-width:430px){
   .intro-col-two{
     display: none;
   }
