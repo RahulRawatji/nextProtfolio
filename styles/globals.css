@@ -9,6 +9,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+h1,h2,h3,h4{
+  margin: 0;
+  padding: 0;
+}
 
 a {
   color: inherit;
@@ -16,6 +20,8 @@ a {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -23,3 +29,97 @@ a {
   font-family: "burtons";
   src: url(../public/Burtons.otf);
 }
+
+@font-face {
+  font-family:'action-comic';
+  src: url('../public/font/ActionComics.ttf');
+}
+
+.intro{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  height: 70vh;
+}
+
+.intro-col-two{
+  display: flex;
+  gap: 2rem;
+  z-index: 1;
+}
+
+.intro-col-one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:3rem;
+  padding: 8%;
+}
+
+.intro-headding{
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'action-comic';
+}
+.intro-name{
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'action-comic';
+}
+
+.intro-text{
+  font-family: 'action-comic';
+  line-height: 35px;
+}
+.intro-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+@media (max-width:420px){
+  .intro-col-two{
+    display: none;
+  }
+
+  .intro{
+    display: flex;
+  }
+}
+/* 
+.intro-headding::before{
+  content: "";
+  height: 100%;
+  width:1%;
+  position: absolute;
+  top:0;
+  right: 0;
+  left: 0;
+  animation: pointer 5s steps(31) .01s infinite;
+}
+
+
+.intro-headding::after{
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: typewriter 5s steps(31) infinite forwards;
+} */
+
+/* 
+@keyframes pointer {
+  to{
+    left: 100%;
+  }
+}
+
+@keyframes typewriter {
+  to{
+    left: 100%;
+  }
+} */

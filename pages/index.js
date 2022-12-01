@@ -23,16 +23,15 @@ export default function Home() {
   const [activeMail, setActiveMail] = useState("");
   const { scrollYProgress } = useScroll();
 
-  
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Header />
-      <motion.main className='bg-white px-10  dark:bg-gray-800' initial={{ x: -300, opacity: 0 }} transition={{ ease: "easeOut", duration: 0.7 }} animate={{ x: 0, opacity: 1 }}>
+      <motion.main className='bg-white dark:bg-gray-800' initial={{ x: -300, opacity: 0 }} transition={{ ease: "easeOut", duration: 0.7 }} animate={{ x: 0, opacity: 1 }}>
         <motion.div style={{ scaleX: scrollYProgress, position: "fixed", background: "#C70039", top: 0, left: 0, right: 0, height: 10, transformOrigin: 0 }} />
-        <section className='min-h-screen'>
           <nav className='py-10 mb-1 flex justify-between'>
-            <h1 className='text-xl font-burtons dark:text-white'>developedbyRahul</h1>
-            <ul className='flex items-center gap-6'>
+            <h1 className='text-xl font-burtons dark:text-white px-10'>developedbyRahul</h1>
+            <ul className='flex items-center gap-6 px-10'>
               <li>
                 <Link href="/">
                   <FcHome className='cursor-pointer' />
@@ -41,27 +40,32 @@ export default function Home() {
               <li>
                 <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer' color={darkMode ? 'white' : ""} />
               </li>
-              <li>
+              {/* <li>
                 <a className='bg-gradient-to-r from-cyan-500 to-teal-300 text-white px-4 py-2 rounded-md ' href='https://drive.google.com/file/d/1qplLNSouc4TmfZeDsRnk-UJWeSMPtMPl/view?usp=sharing' rel="noreferrer noopener" target="_blank">Resume</a>
-              </li>
+              </li> */}
             </ul>
           </nav>
-          <div className='text-center'>
-            <h2 className='text-5xl py-2 mb-2 text-teal-500 font-medium'>Hi, I'm Rahul 👋</h2>
-            <h2 className='text-2xl font-burtons dark:text-white'>Software Engineer </h2>
-            <p className='text-xl py-3 font-burtons leading-8 text-gray-800 sm:text-md dark:text-white'>
-              Delivering complex products in less time with high quality
-            </p>
+
+          <div className='intro'>
+            <motion.div className='intro-col-two' initial={{ x: 800 }} transition={{ ease: 'linear',duration: 3 }} animate={{ x: 50, opacity: 1 }}>
+              <Image src={require('../public/naruto.gif')} height={450} />
+              {/* <div className=''>
+                  <p className='intro-text'>I AM A SOFTWARE ENGINEER BASED IN UK.
+                  CURRENTLY WORKING AS A FREELANCER.
+              </p>
+              </div> */}
+            </motion.div>
+            <motion.div className='intro-col-one' initial={{ x: 400 }} transition={{ ease: 'linear', duration: 2 }} animate={{ x: 0, opacity: 1 }}>
+              <h3 className='intro-headding'>HELLO, MY NAME IS</h3>
+              <h1 className='intro-name'>RAHUL RAWAT</h1>
+              
+              <div className='text-5xl flex justify-center gap-16 text-gray-600'>
+                <AiFillLinkedin title="LinkedIn Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveLinkedin('blue')} onMouseLeave={() => setActiveLinkedin("")} color={activeLinkedin ? activeLinkedin : ""} onClick={() => window.open(linkedinUrl)} />
+                <AiFillGithub title="Github Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveGithub('black')} onMouseLeave={() => setActiveGithub("")} color={activeGithub ? activeGithub : ""} onClick={() => window.open(githubUrl)} />
+                <AiFillMail title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
+              </div>
+            </motion.div>
           </div>
-          <div className='relative w-80 h-80 mx-auto'>
-            <Image className="rounded-full" src={devAvatar} layout='fill' alt="DevAvatar" />
-          </div>
-          <div className='text-5xl flex justify-center py-10 gap-16 text-gray-600'>
-            <AiFillLinkedin title="LinkedIn Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveLinkedin('blue')} onMouseLeave={() => setActiveLinkedin("")} color={activeLinkedin ? activeLinkedin : ""} onClick={() => window.open(linkedinUrl)} />
-            <AiFillGithub title="Github Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveGithub('black')} onMouseLeave={() => setActiveGithub("")} color={activeGithub ? activeGithub : ""} onClick={() => window.open(githubUrl)} />
-            <AiFillMail title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
-          </div>
-        </section>
 
         <TechnologyUsed />
 
@@ -77,7 +81,7 @@ export default function Home() {
           </div>
         </section>
 
-       <RandomQuote/>
+        <RandomQuote />
 
         <section className=' mt-4'>
           <h3 className='text-3xl py-1 font-burtons dark:text-gray-200'>Projects</h3>
