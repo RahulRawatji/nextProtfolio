@@ -31,15 +31,11 @@ export default function Home() {
         <motion.div style={{ scaleX: scrollYProgress, position: "fixed", background: "#C70039", top: 0, left: 0, right: 0, height: 10, transformOrigin: 0 }} />
 
           <div className='intro'>
-            <motion.div className='intro-col-two' initial={{ x: 800  }} transition={{ ease: 'linear',duration: 3 }} animate={{ x: 50 ,opacity: 1 }}>
+            <motion.div className='intro-col-two' initial={{ x: 800  }} transition={{ ease: 'linear',duration: 1.5 }} animate={{ x: 50 ,opacity: 1 }}>
               <Image src={require('../public/naruto.gif')} height={200} />
-              {/* <div className=''>
-                  <p className='intro-text'>I AM A SOFTWARE ENGINEER BASED IN UK.
-                  CURRENTLY WORKING AS A FREELANCER.
-              </p>
-              </div> */}
+
             </motion.div>
-            <motion.div className='intro-col-one' initial={{ x: 400, opacity: 0 }} transition={{ ease: 'linear', duration: 2.5, delay:0.5 }} animate={{ x: 0, opacity: 1 }}>
+            <motion.div className='intro-col-one' initial={{ x: 400, opacity: 0 }} transition={{ ease: 'linear', duration: 1.5, delay:0.5 }} animate={{ x: 0, opacity: 1 }}>
               <h3 className='intro-headding'>HELLO, MY NAME IS</h3>
               <motion.h1 className='intro-name' transition={{scale:2}}>RAHUL RAWAT</motion.h1>
               
@@ -51,7 +47,7 @@ export default function Home() {
             </motion.div>
           </div>
 
-    <nav className='py-10 flex justify-between'>
+    <nav className='py-5 flex justify-between'>
             <span className='font-burtons mx-5 text-xl'>developedBy<span className='headChar text-3xl'>R</span></span>
             <ul className='flex items-center gap-6 px-10'>
               <li>
@@ -59,9 +55,9 @@ export default function Home() {
                   <FcHome className='cursor-pointer' />
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer' color={darkMode ? 'white' : ""} />
-              </li>
+              </li> */}
               {/* <li>
                 <a className='bg-gradient-to-r from-cyan-500 to-teal-300 text-white px-4 py-2 rounded-md ' href='https://drive.google.com/file/d/1qplLNSouc4TmfZeDsRnk-UJWeSMPtMPl/view?usp=sharing' rel="noreferrer noopener" target="_blank">Resume</a>
               </li> */}
