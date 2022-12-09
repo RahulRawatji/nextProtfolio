@@ -67,11 +67,11 @@ export default function Home() {
                                 <li>React</li>
                                 <li>CSS</li>
                                 <li>HTML</li>
+                                <li>NEXT JS</li>
                             </ul>
                         </div>
                         <a href="https://phoenix-eta.vercel.app/"><div className='project-img-container'>
-                         <img src="trek.png" className='project-img'
-                               />
+                         <img src="trek.png" className='project-img' />
                         </div></a>
                     </div>
                     <div className='project-items'>
@@ -86,8 +86,9 @@ export default function Home() {
                                 <li>React</li>
                                 <li>CSS</li>
                                 <li>HTML</li>
+                                <li>NEXT JS</li>
                             </ul>
-                         
+                            <p>A Responsive Portfolio Website Designed and Developed to Practise and showcase Skill of different Web  Development Technologies.</p>                         
                         </div>
     
                     </div>

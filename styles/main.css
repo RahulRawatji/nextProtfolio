@@ -43,10 +43,10 @@ h3{
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    background-image: linear-gradient(to left,#ef651acb,#ffd7ba );
+    background-image: linear-gradient(to left,#e28655cb,#ffd7ba );
     background-clip: text;
     color: transparent;
-    animation: animateBackground 7s ease-in-out infinite alternate-reverse;
+    animation: animateBackground 5s ease-in-out infinite alternate-reverse;
     border-bottom: 1px solid #3333;
 }
 
@@ -61,7 +61,6 @@ h3{
     margin-top: 4%;
     display: grid;
     gap: 1.3rem;
-    /* border: 2px solid #3333; */
     border-radius: 20px;
    
 }
@@ -69,7 +68,6 @@ h3{
 .project-img-container{
    display: flex;
    justify-content: center;
-   width: 90%;
    padding: 10%;
     -webkit-box-shadow: 5px 5px 19px 0px rgba(0,0,0,0.66); 
     box-shadow: 5px 5px 19px 0px rgba(0,0,0,0.66);
