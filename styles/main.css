@@ -61,10 +61,9 @@ h3{
     margin-top: 4%;
     display: grid;
     gap: 1.3rem;
-    border: 2px solid #3333;
+    /* border: 2px solid #3333; */
     border-radius: 20px;
-    -webkit-box-shadow: 5px 5px 19px 0px rgba(0,0,0,0.66); 
-    box-shadow: 5px 5px 19px 0px rgba(0,0,0,0.66);
+   
 }
 
 .project-img-container{
@@ -72,6 +71,14 @@ h3{
    justify-content: center;
    width: 90%;
    padding: 10%;
+    -webkit-box-shadow: 5px 5px 19px 0px rgba(0,0,0,0.66); 
+    box-shadow: 5px 5px 19px 0px rgba(0,0,0,0.66);
+
+}
+
+.project-img-container:hover{
+   transition: transform .7s ;  
+   transform: scale(1.1)
 }
 
 .project-content{
@@ -83,6 +90,7 @@ h3{
 .project-list{
     display: flex;
     gap: 1rem;
+    padding: 4%;
 }
 
 .project-img{
@@ -94,7 +102,7 @@ h3{
 .quote-section{
     background-image: linear-gradient(to left,#ef651acb,#ffd7ba );
     padding: 5%;
-    margin: 2%;
+    margin: 5%;
     color: #34414f;
     border-radius: 25px;
     animation: animateBackground 7s ease-in-out infinite alternate-reverse;
@@ -119,7 +127,6 @@ h3{
 
 .contact-section{
     padding: 1%;
-    height: 80vh;
 }
 
 .contact-section p{

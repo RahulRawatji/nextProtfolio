@@ -48,9 +48,9 @@ export default function Home() {
                 <section className='project-section'>
                     <h2>Projects</h2>
                     <div className='project-items'>
-                        <div className='project-img-container'>
+                       <a href='/'><div className='project-img-container'>
                          <img src="shopping.jpg" className='project-img' />
-                        </div>
+                        </div></a>
                         <div className='project-content'>
                             <h3>Shopping Kart</h3>
                             <ul className='project-list'>
@@ -58,7 +58,6 @@ export default function Home() {
                                 <li>CSS</li>
                                 <li>HTML</li>
                             </ul>
-                            <a href="/">DEMO</a>
                         </div>
                     </div>
                     <div className='project-items'>
@@ -69,18 +68,18 @@ export default function Home() {
                                 <li>CSS</li>
                                 <li>HTML</li>
                             </ul>
-                            <a href="https://phoenix-eta.vercel.app/">DEMO</a>
                         </div>
-                        <div className='project-img-container'>
+                        <a href="https://phoenix-eta.vercel.app/"><div className='project-img-container'>
                          <img src="trek.png" className='project-img'
                                />
-                        </div>
+                        </div></a>
                     </div>
                     <div className='project-items'>
-                        <div className='project-img-container'>
+                    <a href='https://next-protfolio-phi.vercel.app/'> <div className='project-img-container'>
                          <img src="portfolio.jpg" className='project-img'
                                />
                         </div>
+                        </a>
                         <div className='project-content'>
                             <h3>Portfolio</h3>
                             <ul className='project-list'>
@@ -88,7 +87,7 @@ export default function Home() {
                                 <li>CSS</li>
                                 <li>HTML</li>
                             </ul>
-                            <a href='https://next-protfolio-phi.vercel.app/'>DEMO</a>
+                         
                         </div>
     
                     </div>
