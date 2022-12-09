@@ -37,6 +37,7 @@ export default function Home() {
                         <a className='btn' href='#contact' title='Contact Me'>Contact Me</a>
                     </div>
                 </section>
+                
                 <section className='skills-section'>
                     <h2>HTML</h2>
                     <h2>CSS</h2>

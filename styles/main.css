@@ -80,10 +80,6 @@ h3{
     padding: 3%  5%;
 }
 
-.project-content h3{
-    
-}
-
 .project-list{
     display: flex;
     gap: 1rem;
@@ -190,7 +186,9 @@ footer ul{
        grid-template-columns: 1fr 1fr;
        place-content: center;
     }
-
+    .project-content{
+        border-top:none;
+    }
 
 }
 
