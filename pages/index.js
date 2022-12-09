@@ -57,9 +57,29 @@ export default function Home() {
                                 <li>CSS</li>
                                 <li>HTML</li>
                             </ul>
+                            <a href="/">DEMO</a>
                         </div>
                     </div>
                     <div className='project-items'>
+                        <div className='project-content'>
+                            <h3>Trek Booking</h3>
+                            <ul className='project-list'>
+                                <li>React</li>
+                                <li>CSS</li>
+                                <li>HTML</li>
+                            </ul>
+                            <a href="https://phoenix-eta.vercel.app/">DEMO</a>
+                        </div>
+                        <div className='project-img-container'>
+                         <img src="trek.png" className='project-img'
+                               />
+                        </div>
+                    </div>
+                    <div className='project-items'>
+                        <div className='project-img-container'>
+                         <img src="portfolio.jpg" className='project-img'
+                               />
+                        </div>
                         <div className='project-content'>
                             <h3>Portfolio</h3>
                             <ul className='project-list'>
@@ -67,11 +87,9 @@ export default function Home() {
                                 <li>CSS</li>
                                 <li>HTML</li>
                             </ul>
+                            <a href='https://next-protfolio-phi.vercel.app/'>DEMO</a>
                         </div>
-                        <div className='project-img-container'>
-                         <img src="portfolio.jpg" className='project-img'
-                               />
-                        </div>
+    
                     </div>
                 </section>
 
