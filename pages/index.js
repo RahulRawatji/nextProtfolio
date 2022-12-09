@@ -1,143 +1,99 @@
+import { isEmpty } from 'lodash';
+import { useFormik } from 'formik';
 
-import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { AiFillGithub, AiFillLinkedin, AiFillMail } from 'react-icons/ai';
-import Link from 'next/link';
-import { FcHome } from "react-icons/fc";
-
-import Image from 'next/image';
-import { useState } from 'react';
-import { delay, motion, useScroll } from 'framer-motion';
-
-import devAvatar from '../public/devAvatar.png';
-import TechnologyUsed from '../components/TechnologyUsed';
-import Avatar from '../public/avatar.jpg';
 import Header from '../components/Header';
+import Navbar from '../components/Navbar';
+import Input from '../components/Input';
 import RandomQuote from '../components/RandomQuote';
+import Footer from '../components/Footer';
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-  const linkedinUrl = "https://www.linkedin.com/in/rahul-rawat21";
-  const githubUrl = "https://github.com/RahulRawatji";
-  const [activeLinkedin, setActiveLinkedin] = useState("");
-  const [activeGithub, setActiveGithub] = useState("");
-  const [activeMail, setActiveMail] = useState("");
-  const { scrollYProgress } = useScroll();
 
+    const formData = useFormik({
+        initialValues: {
+            name: "",
+            subject: "",
+            email: "",
+            message: ""
+        },
+        onSubmit: values => {
+            console.log(values)
+        },
+    });
 
-  return (
-    <div className={darkMode ? "dark" : ""}>
-      <Header />
-      <motion.main className='bg-white dark:bg-gray-800' initial={{ x: -300, opacity: 0 }} transition={{ ease: "easeOut", duration: 0.7 }} animate={{ x: 0, opacity: 1 }}>
-        <motion.div style={{ scaleX: scrollYProgress, position: "fixed", background: "#C70039", top: 0, left: 0, right: 0, height: 10, transformOrigin: 0 }} />
+    return <>
+        <Header />
+        <div className='body_container'>
+            <Navbar />
+            <div className='main'>
+                <section className='hero'>
+                    <div className='hero-img'>
+                        <img src='/pain.webp' width={'300px'} />
+                    </div>
+                    <div className='hero-content'>
+                        <h1>Nice to meet you!<br></br> I'm Rahul Rawat</h1>
+                        <p>Based in New Delhi. I'm a Full Stack Devloper passionate about building accessible Web Apps that user love.
+                        </p>
+                        <a className='btn' href='#contact' title='Contact Me'>Contact Me</a>
+                    </div>
+                </section>
+                <section className='skills-section'>
+                    <h2>HTML</h2>
+                    <h2>CSS</h2>
+                    <h2>REACT</h2>
+                    <h2>JAVASCRIPT</h2>
+                </section>
 
-          <div className='intro'>
-            <motion.div className='intro-col-two' initial={{ x: 800  }} transition={{ ease: 'linear',duration: 1.5 }} animate={{ x: 50 ,opacity: 1 }}>
-              <Image src={require('../public/naruto.gif')} height={200} />
+                <section className='project-section'>
+                    <h2>Projects</h2>
+                    <div className='project-items'>
+                        <div className='project-img-container'>
+                         <img src="shopping.jpg" className='project-img' />
+                        </div>
+                        <div className='project-content'>
+                            <h3>Shopping Kart</h3>
+                            <ul className='project-list'>
+                                <li>React</li>
+                                <li>CSS</li>
+                                <li>HTML</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='project-items'>
+                        <div className='project-content'>
+                            <h3>Portfolio</h3>
+                            <ul className='project-list'>
+                                <li>React</li>
+                                <li>CSS</li>
+                                <li>HTML</li>
+                            </ul>
+                        </div>
+                        <div className='project-img-container'>
+                         <img src="portfolio.jpg" className='project-img'
+                               />
+                        </div>
+                    </div>
+                </section>
 
-            </motion.div>
-            <motion.div className='intro-col-one' initial={{ x: 400, opacity: 0 }} transition={{ ease: 'linear', duration: 1.5, delay:0.5 }} animate={{ x: 0, opacity: 1 }}>
-              <h3 className='intro-headding'>HELLO, MY NAME IS</h3>
-              <motion.h1 className='intro-name' transition={{scale:2}}>RAHUL RAWAT</motion.h1>
-              
-              <div className='text-5xl flex justify-center gap-16 text-gray-600'>
-                <AiFillLinkedin title="LinkedIn Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveLinkedin('blue')} onMouseLeave={() => setActiveLinkedin("")} color={activeLinkedin ? activeLinkedin : ""} onClick={() => window.open(linkedinUrl)} />
-                <AiFillGithub title="Github Profile" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveGithub('black')} onMouseLeave={() => setActiveGithub("")} color={activeGithub ? activeGithub : ""} onClick={() => window.open(githubUrl)} />
-                <AiFillMail title="Mail" className="cursor-pointer dark:text-white" onMouseOver={() => setActiveMail('teal')} onMouseLeave={() => setActiveMail("")} color={activeMail ? activeMail : ""} />
-              </div>
-            </motion.div>
-          </div>
+                <section className='quote-section'>
+                    <RandomQuote />
+                </section>
 
-    <nav className='py-5 flex justify-between'>
-            <span className='font-burtons mx-5 text-xl'>developedBy<span className='headChar text-3xl'>R</span></span>
-            <ul className='flex items-center gap-6 px-10'>
-              <li>
-                <Link href="/">
-                  <FcHome className='cursor-pointer' />
-                </Link>
-              </li>
-              {/* <li>
-                <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer' color={darkMode ? 'white' : ""} />
-              </li> */}
-              {/* <li>
-                <a className='bg-gradient-to-r from-cyan-500 to-teal-300 text-white px-4 py-2 rounded-md ' href='https://drive.google.com/file/d/1qplLNSouc4TmfZeDsRnk-UJWeSMPtMPl/view?usp=sharing' rel="noreferrer noopener" target="_blank">Resume</a>
-              </li> */}
-            </ul>
-          </nav>
-
-
-        <TechnologyUsed />
-
-        <section>
-          <div>
-            <h3 className='text-3xl py-1 font-burtons dark:text-gray-200'>What I Provide</h3>
-            <div className='text-xl py-2 leading-8 text-gray-800 dark:text-gray-200'>
-              <h3>- Design, Development, and Maintenance of Web and Mobile Applications.</h3>
-              <h3>- Highly interactive Front end / User Interfaces.</h3>
-              <h3>- Building AWS Lambda Functions.</h3>
-              <h3>- DataFix Support.</h3>
+                <section className='contact-section' id="contact">
+                    <h2>Contact</h2>
+                    <p>If you’d like to chat about a project or just have question, please fill in the form below. I aim to get back within 2 days.
+                    </p>
+                    <form onSubmit={formData.handleSubmit}>
+                        <Input title='name' value={formData.values.name} onChange={formData.handleChange} required />
+                        <Input title='email' value={formData.values.email} onChange={formData.handleChange} type="email" required />
+                        <Input title='subject' value={formData.values.subject} onChange={formData.handleChange} columnCount={'1/ span 2'} required />
+                        <Input title='message' value={formData.values.message} onChange={formData.handleChange} columnCount={'1/ span 2'} required />
+                        <button className='btn btn-form' type='submit'>Send Message</button>
+                    </form>
+                </section>
             </div>
-          </div>
-        </section>
-
-        <RandomQuote />
-
-        <section className=' mt-4'>
-          <h3 className='text-3xl py-1 font-burtons dark:text-gray-200'>Projects</h3>
-          <div className='lg:flex gap-10'>
-
-            <div className='basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 bg-slate-100 '>
-              <h3 className='text-xl font-bold px-2'>Basic Projects</h3>
-              <p className='py-1 flex-wrap'>
-                Calculator, Find An Activity, A Protfolio
-              </p>
-              <Link href="/levelB">
-                <div className='p-2 shadow-md mt-3 hover:bg-teal-300 font-burtons cursor-pointer'>
-                  View Projects
-                </div>
-              </Link>
-            </div>
-
-            <div className=' basis-1/2 text-center shadow-lg p-10 rounded-xl my-5 bg-slate-100 '>
-              <h3 className='text-xl font-bold px-2'>Web Applications Projects</h3>
-              <p className='py-1 flex-wrap'>
-                Micro Blogging App, Movies App, A Portfolio
-              </p>
-              <Link href="/levelA">
-                <div className='p-2 shadow-md hover:bg-teal-300 mt-3 font-burtons cursor-pointer'>
-                  View Projects
-                </div>
-              </Link>
-            </div>
-
-          </div>
-        </section>
-
-        <section className='border-spacing-4 shadow-lg font-burtons p-10 m-5 rounded-xl dark:bg-slate-200'>
-          <h3 className='text-3xl py-1 mb-3 '>About me!</h3>
-          <div className='flex flex-wrap gap-4 justify-around md:p-5  rounded-lg shadow-lg '>
-            <p className='md:text-xl md:p-5 text-center w-80 text-gray-700'>
-              `I am a dedicated and diligent individual toward the world of computers.
-              having a self driven attitude to embrace new tools and skills.
-              i have niche towards web-development. Living life, having fun, enjoying the sunsets.
-              tea, music, dance and nature.`
-            </p>
-            <Image className="rounded-full border-4" alt="DevAvatar" width={350} height={10} objectFit='cover' src={Avatar} />
-          </div>
-        </section>
-
-        <div className='border-spacing-4 shadow-lg p-10 m-5 rounded-xl font-burtons dark:bg-slate-200'>
-          <h3 className='text-3xl py-1 mb-3 '>Reach Out to me!</h3>
-          <div className='font-burtons p-5 md:text-10md flex-col '>
-            <div className='flex items-center flex-wrap gap-5'>
-              <h3 className='m-4' >Associate Software Engineer @BYJU's 💭</h3>
-              <h3 className='m-4'>Open for opportunities: <span className='text-red-500 text-4xl'>Yes</span></h3>
-              <h3 className='m-4'>Mail: <span className='text-red-500 md:text-2xl'><a>rahulrawatwork@gmail.com</a></span></h3>
-            </div>
-          </div>
         </div>
+        <Footer />
+    </>
 
-      </motion.main>
-    </div>
-
-  )
 }

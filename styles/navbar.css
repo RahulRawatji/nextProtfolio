@@ -1,0 +1,25 @@
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+}
+
+@media (min-width:482px){
+    nav{
+        justify-content: space-between;
+    }
+
+    nav ul{
+        width: 10%;
+    }
+}

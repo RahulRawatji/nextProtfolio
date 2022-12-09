@@ -1,21 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: -apple-system, 'Space Grotesk', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #293241;
+  scroll-behavior: smooth;
 }
+
+ul{
+  list-style: none;
+}
+
 h1,h2,h3,h4{
   margin: 0;
   padding: 0;
 }
 
-a {
-  color: inherit;
+a{
   text-decoration: none;
 }
 
@@ -25,98 +29,46 @@ a {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "burtons";
-  src: url(../public/Burtons.otf);
+
+/* My Outer Styles */
+
+.body_container{
+  padding: 2% 5%;
 }
 
-@font-face {
-  font-family:'action-comic';
-  src: url('../public/font/ActionComics.ttf');
-}
-
-nav{
-  position: sticky;
-  top:0;
-  background-image: linear-gradient(white, #ef3939c2);
-}
-
-.headChar{
-  font-family: 'action-comic';
-}
-.intro{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  overflow: hidden;
-  gap:5rem;
-  height: 85vh;
-}
-
-.intro-col-two{
-  display: flex;
-  gap: 2rem;
-  z-index: 1;
-  justify-content: center;
-}
-
-.intro-col-one{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  /* background-color: hsla(0, 85%, 58%, 0.666); */
-  border-radius: 10%;
-  margin: 5%;
-}
-
-.intro-headding{
+.btn{
+  padding: 1% 3%;
+  border-radius: 5px;
+  border: none;
   font-size: 1rem;
-  text-align: center;
-  font-family: 'action-comic';
-}
-.intro-name{
-  font-size: 3rem;
-  text-align: center;
-  font-family: 'action-comic';
+  font-weight: bold;
+  background-color: #cbf3f0;
+  color: #343a40;
+  cursor: pointer;
 }
 
-.intro-text{
-  font-family: 'action-comic';
-  line-height: 35px;
+.btn:hover{
+  background-color: #168aad;
+  color: #f8f9fa;
 }
-.intro-content{
+
+.input_field{
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 1.5rem;
+  gap: 0.3rem;
+  margin: 1% 0%;
 }
 
-@media (max-width:430px){
-  .intro-col-two{
-    display: none;
-  }
-
-  .intro{
-    display: flex;
-  }
-}
-.custom-shape-divider-bottom-1670218390 {
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%; */
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
+.input_field label{
+  font-size: 1rem;
+  padding: 1%;
+  color: #6c757d;
 }
 
-.custom-shape-divider-bottom-1670218390 svg {
-  /* position: relative; */
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 209px;
-}
-
-.custom-shape-divider-bottom-1670218390 .shape-fill {
-  fill: hsla(0, 85%, 58%, 0.619);
+.input_field input{
+  padding: 1%;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: 0.5px solid #6c757d;
 }

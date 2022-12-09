@@ -5,12 +5,7 @@ import { useInView ,motion } from 'framer-motion';
 
 const RandomQuote = () => {
   const [quoteData, set] = useState({});
-  // const ref = useRef(null);
-  // const isInView = useInView(ref,{
-  //   margin: "0% 0% -40% 0%",
-  //   once: true
-  // });
-
+ 
   useEffect(() => {
     fetchRandomQuote();
   }, []);
@@ -25,14 +20,11 @@ const RandomQuote = () => {
   };
 
   return (
-    <motion.div className='md:m-10 p-20 flex-col border-spacing-4 shadow-lg dark:bg-slate-200'>
-    <div className='grid justify-items-end p-2'>
-      <AiOutlineReload onClick={() => fetchRandomQuote()} />
-    </div>
-    <h2 className='md:text-5xl sm:text-4xl  font-burtons text-yellow-600 text-center md:px-10'>
-      "{quoteData.text} "
-    </h2>
-    <p className='md:text-xl text-center px-20 m-2'>
+    <motion.div initial={{opacity:0}} transition={{ delay: .5 }} whileInView={{ opacity:1, scale:.8}} viewport={{ once: true }}>
+    <h3 className='quote'>
+      {quoteData.text}
+    </h3>
+    <p className=''>
       {quoteData.author}
     </p>
   </motion.div>
