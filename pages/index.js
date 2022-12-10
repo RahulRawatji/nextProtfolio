@@ -1,5 +1,6 @@
-import { isEmpty } from 'lodash';
 import { useFormik } from 'formik';
+import { motion, useInView } from "framer-motion";
+import { useRef } from 'react';
 
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
@@ -47,7 +48,8 @@ export default function Home() {
 
                 <section className='project-section'>
                     <h2>Projects</h2>
-                    <div className='project-items'>
+                    <motion.div className='project-items' initial={{ opacity: 0 }} whileInView={{ opacity:1}}
+                                    viewport={{ once: true }}  transition={{ ease: "easeIn", duration: .5, delay:.1 }}>
                        <a href='https://63930f7a24b84f21ee0878b6--super-empanada-f72d08.netlify.app/'><div className='project-img-container'>
                          <img src="shopping.jpg" className='project-img' />
                         </div></a>
@@ -60,8 +62,9 @@ export default function Home() {
                             </ul>
                             <p>Application is built using the latest web technologies, including responsive design, offers a user-friendly shopping experience, with a clean and intuitive interface</p>
                         </div>
-                    </div>
-                    <div className='project-items'>
+                    </motion.div>
+                    <motion.div className='project-items'  initial={{ opacity: 0 }} whileInView={{ opacity:1}}
+                                    viewport={{ once: true }}  transition={{ ease: "easeIn", duration: .5, delay:.1 }}>
                         <div className='project-content project-content-even'>
                             <h3>Trek Booking</h3>
                             <ul className='project-list'>
@@ -74,8 +77,9 @@ export default function Home() {
                         <a href="https://phoenix-eta.vercel.app/"><div className='project-img-container'>
                          <img src="trek.png" className='project-img' />
                         </div></a>
-                    </div>
-                    <div className='project-items'>
+                    </motion.div>
+                    <motion.div className='project-items'  initial={{ opacity: 0 }} whileInView={{ opacity:1}}
+                                    viewport={{ once: true }}  transition={{ ease: "easeIn", duration: .5, delay:.1 }}>
                     <a href='https://next-protfolio-phi.vercel.app/'> <div className='project-img-container'>
                          <img src="portfolio.jpg" className='project-img'
                                />
@@ -92,7 +96,7 @@ export default function Home() {
                             <p>A Responsive Portfolio Website Designed and Developed to Practise and showcase Skill of different Web  Development Technologies.</p>                         
                         </div>
     
-                    </div>
+                    </motion.div>
                 </section>
 
                 <section className='quote-section'>

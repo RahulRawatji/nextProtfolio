@@ -195,13 +195,24 @@ footer a{
      .project-items{
        grid-template-columns: 1fr 1fr;
        place-content: center;
+       animation: slideIn 1s ease-in 0.1s;
     }
     .project-content{
         border-top:none;
         grid-row-start: 1;
     }
+
     .project-content-even{
         grid-column-start: 2;
+    }
+
+    @keyframes slideIn {
+        from{
+            transform: translateX(200);
+        }
+        to{
+            transform: translateX(0);
+        }
     }
 
 }
