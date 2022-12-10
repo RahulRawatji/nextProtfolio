@@ -32,7 +32,7 @@ export default function Home() {
                     </div>
                     <div className='hero-content'>
                         <h1>Nice to meet you!<br></br> I'm Rahul Rawat</h1>
-                        <p>Based in New Delhi. I'm a Full Stack Devloper passionate about building accessible Web Apps that user love.
+                        <p>Based in New Delhi. I have a passion for creating dynamic, user-friendly websites that engage and inspire. With a background in computer science and a keen eye for design, I bring a unique blend of technical expertise and creative vision to every project.
                         </p>
                         <a className='btn' href='#contact' title='Contact Me'>Contact Me</a>
                     </div>
@@ -48,20 +48,21 @@ export default function Home() {
                 <section className='project-section'>
                     <h2>Projects</h2>
                     <div className='project-items'>
-                       <a href='/'><div className='project-img-container'>
+                       <a href='https://63930f7a24b84f21ee0878b6--super-empanada-f72d08.netlify.app/'><div className='project-img-container'>
                          <img src="shopping.jpg" className='project-img' />
                         </div></a>
-                        <div className='project-content'>
+                        <div className='project-content '>
                             <h3>Shopping Kart</h3>
                             <ul className='project-list'>
                                 <li>React</li>
                                 <li>CSS</li>
                                 <li>HTML</li>
                             </ul>
+                            <p>Application is built using the latest web technologies, including responsive design, offers a user-friendly shopping experience, with a clean and intuitive interface</p>
                         </div>
                     </div>
                     <div className='project-items'>
-                        <div className='project-content'>
+                        <div className='project-content project-content-even'>
                             <h3>Trek Booking</h3>
                             <ul className='project-list'>
                                 <li>React</li>

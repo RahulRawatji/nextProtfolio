@@ -83,6 +83,7 @@ h3{
     border-top: 2px solid #3333;
     margin: 1%;
     padding: 3%  5%;
+    grid-row-start: 2;
 }
 
 .project-list{
@@ -159,6 +160,10 @@ footer ul{
     gap:1rem;
 }
 
+footer a{
+    color: azure;
+}
+
 
 @media (min-width:482px){
     
@@ -193,6 +198,10 @@ footer ul{
     }
     .project-content{
         border-top:none;
+        grid-row-start: 1;
+    }
+    .project-content-even{
+        grid-column-start: 2;
     }
 
 }
