@@ -50,7 +50,7 @@ export default function Home() {
                     <h2>Projects</h2>
                     <motion.div className='project-items' initial={{ opacity: 0 }} whileInView={{ opacity:1}}
                                     viewport={{ once: true }}  transition={{ ease: "easeIn", duration: .5, delay:.1 }}>
-                       <a href='https://63930f7a24b84f21ee0878b6--super-empanada-f72d08.netlify.app/'><div className='project-img-container'>
+                       <a href='https://super-empanada-f72d08.netlify.app/'><div className='project-img-container'>
                          <img src="shopping.jpg" className='project-img' />
                         </div></a>
                         <div className='project-content '>
