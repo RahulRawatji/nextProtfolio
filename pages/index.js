@@ -32,7 +32,7 @@ export default function Home() {
                         <img src='/pain.webp' width={'300px'} />
                     </div>
                     <div className='hero-content'>
-                        <h1>Nice to meet you!<br></br> I'm Rahul Rawat</h1>
+                        <h1> I'm <span className='typewriter__effect'>Rahul Rawat</span><br></br>Nice to meet you!</h1>
                         <p>Based in New Delhi. I have a passion for creating dynamic, user-friendly websites that engage and inspire. With a background in computer science and a keen eye for design, I bring a unique blend of technical expertise and creative vision to every project.
                         </p>
                         <a className='btn' href='#contact' title='Contact Me'>Contact Me</a>
@@ -61,6 +61,13 @@ export default function Home() {
                                 <li>HTML</li>
                             </ul>
                             <p>Application is built using the latest web technologies, including responsive design, offers a user-friendly shopping experience, with a clean and intuitive interface</p>
+                            <div className='m-2'>
+                                <ul className='flex-col-gap-1'>
+                                    <li>- Responsive UI Design</li>
+                                    <li>- CSS Animation</li>
+                                    <li>- React Routing</li>
+                                </ul>
+                            </div>
                         </div>
                     </motion.div>
                     <motion.div className='project-items'  initial={{ opacity: 0 }} whileInView={{ opacity:1}}

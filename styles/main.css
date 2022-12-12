@@ -35,6 +35,44 @@ h3{
     float: left;
 }
 
+.typewriter__effect{
+    position: relative;
+}
+.typewriter__effect::before{
+    display: inline-block;
+    content: " ";
+    background-color: #ffffff;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    animation: typewriter 3s steps(12) .1s forwards;
+}
+
+.typewriter__effect::after{
+    display: inline-block;
+    content: " ";
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    width: 1%;
+    height: 90%;
+    animation: pointer 3s steps(12) forwards;
+}
+
+@keyframes pointer{
+    to{
+        left: 100%;
+    }
+}
+
+
+@keyframes typewriter{
+    to{
+        left: 100%;
+    }
+}
+
 /* Skills Section */
 
 .skills-section{

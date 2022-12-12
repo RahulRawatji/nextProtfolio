@@ -74,3 +74,13 @@ a, a:link, a:hover{
   border-radius: 5px;
   border: 0.5px solid #6c757d;
 }
+
+.m-2{
+  margin: 2%
+}
+
+.flex-col-gap-1{
+  display: flex;
+  gap:1rem;
+  flex-direction: column;
+}
