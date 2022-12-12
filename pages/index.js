@@ -1,6 +1,8 @@
 import { useFormik } from 'formik';
 import { motion, useInView } from "framer-motion";
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import {GrClose} from 'react-icons/gr';
 
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
@@ -9,6 +11,25 @@ import RandomQuote from '../components/RandomQuote';
 import Footer from '../components/Footer';
 
 export default function Home() {
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertMsg, setAlertMsg] = useState('Mail cannot be sent. Pls Try Again Later!');
+
+    const closeAlertBox = () =>{
+        setShowAlert(false);
+    }
+    const sendMail = async(values) =>{
+        try{
+            const {name: from_name, email: reply_to, message, to_name='rahulrawatwork@gmail.com'} = values;
+            const result = await emailjs.send('service_tb9ocwi', 'template_9hypptm', {from_name,reply_to,message, to_name}, '85xsWFLKZaRABmESS')
+            if(result.status === 200){
+                setAlertMsg("Mail Send Successfully. Thanks for Connecting")
+            }
+            setShowAlert(result.status);
+            formData.resetForm();
+        }catch(e){
+            setAlertMsg(e)
+        }
+    };
 
     const formData = useFormik({
         initialValues: {
@@ -18,7 +39,7 @@ export default function Home() {
             message: ""
         },
         onSubmit: values => {
-            console.log(values)
+            sendMail(values);
         },
     });
 
@@ -114,6 +135,9 @@ export default function Home() {
                     <h2>Contact</h2>
                     <p>If you’d like to chat about a project or just have question, please fill in the form below. I aim to get back within 2 days.
                     </p>
+                    {showAlert && <div className='alertBox'>
+                        <h5>{alertMsg}</h5><GrClose size={20} style={{padding:'2px'}} onClick={closeAlertBox}/>
+                    </div>}
                     <form onSubmit={formData.handleSubmit}>
                         <Input title='name' value={formData.values.name} onChange={formData.handleChange} required />
                         <Input title='email' value={formData.values.email} onChange={formData.handleChange} type="email" required />

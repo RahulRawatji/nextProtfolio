@@ -78,6 +78,17 @@ a, a:link, a:hover{
 .m-2{
   margin: 2%
 }
+.alertBox{
+  background-color: rgba(205, 87, 107, 0.832);
+  margin: auto;
+  width: 50%;
+  padding: 1%;
+  color: whitesmoke;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+}
 
 .flex-col-gap-1{
   display: flex;

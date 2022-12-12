@@ -46,7 +46,7 @@ h3{
     right: 0;
     left: 0;
     height: 100%;
-    animation: typewriter 3s steps(12) .1s forwards;
+    animation: typewriter 2s steps(12) .07s forwards;
 }
 
 .typewriter__effect::after{
@@ -57,7 +57,7 @@ h3{
     left: 0;
     width: 1%;
     height: 90%;
-    animation: pointer 3s steps(12) forwards;
+    animation: pointer 2s steps(12) forwards;
 }
 
 @keyframes pointer{
