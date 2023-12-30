@@ -9,6 +9,9 @@ import Input from "../components/Input"
 import RandomQuote from "../components/RandomQuote"
 import Footer from "../components/Footer"
 import Project from "../components/Project/Project"
+import Image from "next/image"
+
+import headImg from "../public/pain.webp"
 
 export default function Home() {
   const [showAlert, setShowAlert] = useState(false)
@@ -61,11 +64,8 @@ export default function Home() {
       <div className="body_container">
         <Navbar />
         <div className="main w-2/4 mx-auto">
-          <section className="hero">
-            <div className="hero-img">
-              <img src="/pain.webp" width={"300px"} />
-            </div>
-            <div className="">
+          <section className="flex justify-evenly">
+            <div className="p-2 w-2/3">
               <h1 className="text-4xl font-semibold">
                 I'm Rahul Rawat
                 <br></br>Nice to meet you!
@@ -83,13 +83,16 @@ export default function Home() {
                 </a>
               </div>
             </div>
+            <div className="relative w-1/2">
+              <Image src={headImg} layout="fill" />
+            </div>
           </section>
 
-          <section className="skills-section">
-            <h2>HTML</h2>
-            <h2>CSS</h2>
-            <h2>REACT</h2>
-            <h2>JAVASCRIPT</h2>
+          <section className="flex justify-evenly gap-4 mt-10">
+            <h3>HTML</h3>
+            <h3>CSS</h3>
+            <h3>REACT</h3>
+            <h3>JAVASCRIPT</h3>
           </section>
 
           <section className="project-section">
