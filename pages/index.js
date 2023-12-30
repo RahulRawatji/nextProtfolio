@@ -1,6 +1,5 @@
 import { useFormik } from "formik"
-import { motion, useInView } from "framer-motion"
-import { useRef, useState } from "react"
+import { useState } from "react"
 import emailjs from "@emailjs/browser"
 import { GrClose } from "react-icons/gr"
 

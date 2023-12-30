@@ -1,5 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 const Card = ({ data }) => {
   return (
@@ -12,14 +13,14 @@ const Card = ({ data }) => {
     >
       <a href={data?.link}>
         <div className="">
-          <img src={data?.imgLink} className="project-img" />
+          <Image src={data?.imgLink} className="project-img" />
         </div>
       </a>
       <div className=" ">
         <h3>{data?.title}</h3>
         <ul className="project-list">
-          {data?.technologyUsed?.map((tech) => (
-            <li>{tech}</li>
+          {data?.technologyUsed?.map((tech, idx) => (
+            <li key={idx}>{tech}</li>
           ))}
         </ul>
         <p>{data?.info}</p>
