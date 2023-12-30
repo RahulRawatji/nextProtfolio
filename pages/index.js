@@ -83,7 +83,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="relative w-1/2">
+            <div className="relative w-1/3">
               <Image src={headImg} layout="fill" />
             </div>
           </section>
