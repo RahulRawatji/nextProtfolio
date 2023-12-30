@@ -1,26 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, 'Space Grotesk', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, "Space Grotesk", BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
   color: #293241;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   padding: 0;
 }
 
-a, a:link, a:hover{
+a,
+a:link,
+a:hover {
   color: #2c2f33;
   text-decoration: none;
 }
@@ -31,14 +40,13 @@ a, a:link, a:hover{
   box-sizing: border-box;
 }
 
-
 /* My Outer Styles */
 
-.body_container{
+.body_container {
   padding: 2% 5%;
 }
 
-.btn{
+.btn {
   padding: 1% 3%;
   border-radius: 5px;
   border: none;
@@ -49,12 +57,12 @@ a, a:link, a:hover{
   cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #168aad;
   color: #f8f9fa;
 }
 
-.input_field{
+.input_field {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -62,23 +70,23 @@ a, a:link, a:hover{
   margin: 1% 0%;
 }
 
-.input_field label{
+.input_field label {
   font-size: 1rem;
   padding: 1%;
   color: #6c757d;
 }
 
-.input_field input{
+.input_field input {
   padding: 1%;
   font-size: 1.3rem;
   border-radius: 5px;
   border: 0.5px solid #6c757d;
 }
 
-.m-2{
-  margin: 2%
+.m-2 {
+  margin: 2%;
 }
-.alertBox{
+.alertBox {
   background-color: rgba(205, 87, 107, 0.832);
   margin: auto;
   width: 50%;
@@ -90,8 +98,8 @@ a, a:link, a:hover{
   justify-content: space-between;
 }
 
-.flex-col-gap-1{
+.flex-col-gap-1 {
   display: flex;
-  gap:1rem;
+  gap: 1rem;
   flex-direction: column;
 }
